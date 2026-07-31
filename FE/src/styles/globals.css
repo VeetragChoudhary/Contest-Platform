@@ -1,0 +1,184 @@
+/* Self-hosted fonts via fontsource — no network round-trip, no FOUT */
+@import '@fontsource/anton/400.css';
+@import '@fontsource/oswald/400.css';
+@import '@fontsource/oswald/500.css';
+@import '@fontsource/oswald/600.css';
+@import '@fontsource/oswald/700.css';
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/500.css';
+@import '@fontsource/manrope/600.css';
+@import '@fontsource/manrope/700.css';
+@import '@fontsource/manrope/800.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-base: #f3efe7;
+  --bg-panel: #0f0f0f;
+  --text-primary: #111111;
+  --text-muted: #6b7280;
+  --accent: #ff6a00;
+}
+
+html {
+  @apply bg-stone-100;
+}
+
+body {
+  @apply m-0 bg-stone-100 font-sans text-neutral-950 antialiased;
+}
+
+* {
+  @apply border-border;
+}
+
+a {
+  @apply text-inherit no-underline;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+::selection {
+  @apply bg-accent text-white;
+}
+
+.hero-panel {
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 106, 0, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.68), rgba(17, 17, 17, 0.78));
+}
+
+.brand-wordmark {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.typing-brand-shell {
+  display: inline-flex;
+  align-items: flex-end;
+  white-space: nowrap;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.typing-brand-track {
+  display: inline-flex;
+  align-items: flex-end;
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+  animation: brandReveal 2.05s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+}
+
+.typing-brand-caret {
+  display: inline-block;
+  width: 0.07em;
+  height: 0.75em;
+  margin-left: 0.15em;
+  margin-bottom: 0.05em;
+  vertical-align: middle;
+  background: var(--accent);
+}
+
+/* Blinks during the reveal, then fades out and disappears */
+.typing-brand-caret--animated {
+  animation: caretBlink 0.85s ease-in-out 5, caretFadeOut 0.4s ease-in 2.15s forwards;
+}
+
+@keyframes brandReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes caretBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes caretFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; width: 0; margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-brand-shell {
+    width: auto;
+    overflow: visible;
+  }
+
+  .typing-brand-track {
+    clip-path: inset(0 0 0 0);
+    animation: none;
+  }
+
+  .typing-brand-caret {
+    display: none;
+  }
+}
+
+/*
+  Footer motion is intentionally subtle so the oversized background mark
+  stays atmospheric instead of competing with foreground content.
+*/
+.footer-social {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-social::before {
+  content: '';
+  position: absolute;
+  inset: auto 14px -14px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  filter: blur(12px);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.footer-social:hover::before {
+  opacity: 1;
+}
+
+.footer-social:hover {
+  transform: translateY(-1px);
+}
+
+.footer-watermark {
+  transform: translateY(66%);
+}
+
+.editorial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 106, 0, 0.12), transparent 34%);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.editorial-card:hover::before {
+  opacity: 1;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "contestplatform-workspace",
+  "private": true,
+  "scripts": {
+    "dev:be": "npm run dev --prefix BE",
+    "start:be": "npm run start --prefix BE",
+    "typecheck:be": "npm run typecheck --prefix BE",
+    "prisma:generate": "npm run prisma:generate --prefix BE",
+    "prisma:migrate": "npm run prisma:migrate --prefix BE",
+    "prisma:seed": "npm run prisma:seed --prefix BE",
+    "build:fe": "npm run build --prefix FE",
+    "dev:fe": "npm run dev --prefix FE",
+    "start:fe": "npm run preview --prefix FE",
+    "typecheck:fe": "npm run typecheck --prefix FE"
+  }
+}

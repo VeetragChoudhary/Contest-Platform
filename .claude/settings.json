@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://fonts.gstatic.com/s/anton/v25/1Ptgg87LROyAm0K08i4gS7lu.woff2\" -o \"/Users/qzmalekuz/Documents/root/typescript & prisma/ContestPlatform/FE/public/fonts/Anton-Regular.woff2\")",
+      "Bash(curl -s \"https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs13NvgUFoZAaRliE.woff2\" -o \"/Users/qzmalekuz/Documents/root/typescript & prisma/ContestPlatform/FE/public/fonts/Oswald-400.woff2\")",
+      "Bash(curl -s \"https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1yNvgUFoZAaRliE.woff2\" -o \"/Users/qzmalekuz/Documents/root/typescript & prisma/ContestPlatform/FE/public/fonts/Oswald-500.woff2\")",
+      "Bash(curl -s \"https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs169vgUFoZAaRliE.woff2\" -o \"/Users/qzmalekuz/Documents/root/typescript & prisma/ContestPlatform/FE/public/fonts/Oswald-600.woff2\")",
+      "Bash(curl -s \"https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs14ZvgUFoZAaRliE.woff2\" -o \"/Users/qzmalekuz/Documents/root/typescript & prisma/ContestPlatform/FE/public/fonts/Oswald-700.woff2\")",
+      "Bash(npm run:*)",
+      "Bash(npx tsx:*)",
+      "Bash(npx prisma:*)",
+      "Bash(rtk read:*)",
+      "Bash(rtk curl:*)",
+      "Bash(lsof -iTCP -sTCP:LISTEN -n -P)",
+      "Bash(rtk find:*)",
+      "Bash(curl -s http://localhost:4000/api/health)",
+      "Bash(sed -i '' 's/provideCompletionItems: \\(model, position\\) =>/provideCompletionItems: \\(model: Monaco.editor.ITextModel, position: Monaco.Position\\) =>/g' src/components/features/problem/ProblemEditor.tsx)",
+      "Bash(sed -i '' 's/provideHover: \\(model, position\\) =>/provideHover: \\(model: Monaco.editor.ITextModel, position: Monaco.Position\\) =>/g' src/components/features/problem/ProblemEditor.tsx)",
+      "Bash(node -e ' *)",
+      "Bash(rtk psql *)",
+      "Bash(rtk wc *)",
+      "Bash(npm list *)",
+      "Bash(npm install *)"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
+    ]
+  }
+}
