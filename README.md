@@ -1,4 +1,4 @@
-# KodeZilla.io - Contest Platform
+# Contest Platform
 
 ![KodeZilla Banner](kodezilla-banner.png)
 
